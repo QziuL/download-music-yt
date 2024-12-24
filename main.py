@@ -29,7 +29,7 @@ def buscaVideo_e_retornaUrl(search_query):
     else:
         print("Vídeo não encontrado.")
         return "nao_achou"
-    
+
 # Faz a leitura de cada linha do arquivo
 # e chama a função 'buscaVideo_e_retornaUrl' 
 # para cada nome de musica do arquivo, 
@@ -50,7 +50,7 @@ for musica in musicas_urls:
     audio.download(output_path="musicas/")
     print(f"Musica baixada: {audio.default_filename}")
 
-path = os.environ["PATH"]   # pegando do '.env' o caminho completo da pasta que armazena os downloads 
+path = os.getenv("LOCAL_ONDE_ESTAO_AS_MUSICAS")   # pegando do '.env' o caminho completo da pasta que armazena os downloads 
 
 # Renomeia cada musica baixada,
 # trocando os espaços vazios do nome por underline
