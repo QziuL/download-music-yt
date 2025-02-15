@@ -2,6 +2,7 @@ from googleapiclient.discovery import build
 from pytubefix import YouTube
 from dotenv import load_dotenv
 import os
+import platform
 
 load_dotenv()
 
@@ -65,11 +66,15 @@ for nome_arquivo in os.listdir(path):
     
     file_without_ext = os.path.splitext(novo_nome)[0]   # variavel que armazena apenas o nome sem a extensao do arquivo
     
-    # Acessa a pasta onde está contido os downloads e
-    # utiliza o comando de conversão dos arquivos de m4a para mp3 do FFMPEG, previamente instalado no sistema
-    command_convert = f"cd musicas/ && ffmpeg -i '{file_without_ext}.m4a' '{file_without_ext}.mp3'"
-    # Acessa a pasta e realiza removação do arquivo antigo (formato m4a)
-    command_remove = f"cd musicas/ && rm '{file_without_ext}.m4a'"
+    if platform.system() == "Linux":
+        # Acessa a pasta onde está contido os downloads e
+        # utiliza o comando de conversão dos arquivos de m4a para mp3 do FFMPEG, previamente instalado no sistema
+        command_convert = f"cd musicas/ && ffmpeg -i '{file_without_ext}.m4a' '{file_without_ext}.mp3'"
+        # Acessa a pasta e realiza removação do arquivo antigo (formato m4a)
+        command_remove = f"cd musicas/ && rm '{file_without_ext}.m4a'"
+    else:
+        command_convert = f"cd musicas/ && ffmpeg -i {file_without_ext}.m4a {file_without_ext}.mp3"
+        command_remove = f"cd musicas/ && del {file_without_ext}.m4a"
 
     os.system(command_convert)
     os.system(command_remove)
