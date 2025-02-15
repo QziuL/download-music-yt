@@ -4,6 +4,7 @@ Script Desenvolvido em Python que realiza a busca de músicas no Youtube atravé
 
 ## Tecnologias e dependências necessárias:
 
+- Python versão 3
 - Pytubefix ```pip install pytubefix```
 - GoogleAPIClient ```pip install google-api-python-client```
 - Dotenv ```pip install python-dotenv```
