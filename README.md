@@ -2,13 +2,20 @@
 
 Script Desenvolvido em Python que realiza a busca de músicas no Youtube através da leitura de um arquivo .txt e realiza os respectivos downloads, convertendo os arquivos de audio para o formato .mp3 compatível com todos os dispositivos de reprodução.
 
-## Tecnologias usadas:
+## Tecnologias e dependências necessárias:
 
-- Pytubefix
-- GoogleAPIClient
-- FFMPEG
-
-## Como usar
+- Pytubefix ```pip install pytubefix```
+- GoogleAPIClient ```pip install google-api-python-client```
+- Dotenv ```pip install python-dotenv```
+- FFMPEG (nativo em sistemas linux, no windows é necessário [instalação](https://www.gyan.dev/ffmpeg/builds/))
+  <br/>
+  Instalando no Windows:
+  <br/>
+    Ao descompactar a pasta do FFmpeg, altere o seu nome para 'FFmpeg' e recorte ela para o disco 'C:'
+  <br/>
+    Abra o cmd e cole o seguinte comando: ```setx /m PATH "C:\ffmpeg\bin;%PATH%"``` (vai setar a pasta 'bin' nas variaveis de ambiente)
+  
+## Como rodar
 
 1 - É necessário ter um arquivo 'musicas.txt' na raíz do projeto contendo o nome de todas as músicas desejadas.
 
@@ -19,8 +26,5 @@ Script Desenvolvido em Python que realiza a busca de músicas no Youtube atravé
 3 - Importante alterar o caminho da pasta 'musicas' do arquivo '.env' que irá armazenar todas as músicas baixadas.
 
 Após realizar as devidas alterações, basta executar no terminal o comando ```python main.py``` no mesmo caminho onde está o arquivo python.
-
-### Observação:
-Eu desenvolvi esse script utilizando o sistema operacional Linux, caso seu sistema seja outro, atente-se a fazer as devidas importações e alterações no código fonte, caso necessário.
 
 
