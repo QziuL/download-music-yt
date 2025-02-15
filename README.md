@@ -25,6 +25,8 @@ Script Desenvolvido em Python que realiza a busca de músicas no Youtube atravé
 
 3 - Importante alterar o caminho da pasta 'musicas' do arquivo '.env' que irá armazenar todas as músicas baixadas.
 
+4 - Por fim não esqueça de alterar o nome do arquivo '.env-example' para apenas '.env'
+
 Após realizar as devidas alterações, basta executar no terminal o comando ```python main.py``` no mesmo caminho onde está o arquivo python.
 
 
