@@ -14,7 +14,7 @@ Script Desenvolvido em Python que realiza a busca de músicas no Youtube atravé
   <br/>
     Ao descompactar a pasta do FFmpeg, altere o seu nome para 'FFmpeg' e recorte ela para o disco 'C:'
   <br/>
-    Abra o cmd e cole o seguinte comando: ```setx /m PATH "C:\ffmpeg\bin;%PATH%"``` (vai setar a pasta 'bin' nas variaveis de ambiente)
+    Abra o CMD como Administrador e cole o seguinte comando: ```setx /m PATH "C:\ffmpeg\bin;%PATH%"``` (vai setar a pasta 'bin' nas variaveis de ambiente)
   
 ## Como rodar
 
